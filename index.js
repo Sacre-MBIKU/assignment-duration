@@ -2,9 +2,9 @@ const startDate = new Date();
 
 let currentDate = startDate
 let endTime;
-const tache = {
+const task = {
     startDate,
-    duree: 168,
+    duration: 168,
 }
 
 
@@ -24,7 +24,7 @@ do {
     if (isWorkingDay) {
 
         //On enlève 8h à la durée
-        tache.duree = tache.duree - 8;
+        tache.duration = tache.duration - 8;
         //On ajoute 8h à la date actuelle
         currentDate = Date.parse(new Date(currentDate)) + 8 * 60 * 60 * 1000;
         // console.log(currentDate)
@@ -42,7 +42,7 @@ do {
 
 
 
-} while (tache.duree > 0)
+} while (tache.duration > 0)
 
 
 

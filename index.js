@@ -14,11 +14,8 @@ do {
     // Si non on ajoute 24h à current date et à la durée on enlève rien
 
     const isSundandy = currentDate.getDay() === 0;
-    console.log("dimanche ?", isSundandy)
     const isSaturday = currentDate.getDay() === 6;
-    console.log("Samedi ?", isSaturday)
     const isWorkingDay = !isSundandy && !isSaturday;
-    console.log({ isWorkingDay })
 
     // Si c'est un jour ouvrable
     if (isWorkingDay) {
@@ -29,14 +26,12 @@ do {
         currentDate = Date.parse(new Date(currentDate)) + 8 * 60 * 60 * 1000;
         // console.log(currentDate)
         currentDate = new Date(currentDate);
-        console.log({ currentDate })
 
     } else {
         //On ajoute 24h à la date actuelle
 
         currentDate = currentDate + 24 * 60 * 60 * 1000;
         currentDate = new Date(currentDate);
-        console.log({ currentDate })
 
     }
 

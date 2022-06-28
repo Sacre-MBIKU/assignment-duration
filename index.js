@@ -21,24 +21,25 @@ do {
     if (isWorkingDay) {
 
         //On enlève 8h à la durée
-        tache.duration = tache.duration - 8;
+        task.duration = task.duration - 8;
         //On ajoute 8h à la date actuelle
         currentDate = Date.parse(new Date(currentDate)) + 8 * 60 * 60 * 1000;
         // console.log(currentDate)
         currentDate = new Date(currentDate);
 
+
     } else {
         //On ajoute 24h à la date actuelle
 
-        currentDate = currentDate + 24 * 60 * 60 * 1000;
+        currentDate = Date.parse(currentDate) + 24 * 60 * 60 * 1000;
         currentDate = new Date(currentDate);
 
     }
 
 
 
-} while (tache.duration > 0)
+} while (task.duration > 0)
 
 
-
+console.log({ currentDate })
 
